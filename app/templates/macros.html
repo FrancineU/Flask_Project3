@@ -1,0 +1,12 @@
+{% macro displayCategories(category_list) %}
+    {% for category in category_list %}
+       <div class="row"  style="background-color:black; color: darkgray;">
+           <div class="col-md-4"  style="background-color:black; color: darkgray;">
+               <div class="card-title"  style="background-color:black; color: darkgray;">
+                   <h3>{{ category }}</h3>
+               </div>
+           </div>
+       </div>
+    {% endfor %}
+    
+{% endmacro %}  

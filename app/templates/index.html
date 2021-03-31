@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <section class="main "style="background-color: darkgray;">
+        <div class="container " style="background-color: darkgray;">
+            <div class="bg-info container-fluid" style="padding: 10%; background-color: black; color: darkgray;">
+                <h2 class="text-center">Welcome to Pitch Website</h2>
+                <p class="lead text-center"> Show the world your project</p>
+                <p class="text-center">Have a chance to pitch your project</p>
+            </div>
+            <div class="categories"style="background-color: darkgray;">
+                <h3 class="text-muted" style="font-style: italic;">Find Project by Category</h3>
+                {{ macro.displayCategories(all_category)}}
+            </div>
+        </div>
+    </section>
+{% endblock %}
